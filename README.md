@@ -1,7 +1,7 @@
-# Change of Daylight Colour By Time
+# Change of Daylight Colour over Time
 ## Measured with Spectrophotometer
 
-Article and raw-data for Change of Daylight Colour by Time, Measured with Spectrophotometer
+Article and raw-data for Change of Daylight Colour over Time, Measured with Spectrophotometer
 
 
 This repo is currently TBA, actual measurement will be conducted sooner or later.
