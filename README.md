@@ -1,4 +1,4 @@
-# Change of Daylight Colour over Time
+# Change of Daylight Colour throughtout a Day
 ## Measured with Spectrophotometer
 
 Article and raw-data for Change of Daylight Colour over Time, Measured with Spectrophotometer
