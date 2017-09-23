@@ -6,6 +6,9 @@ import java.awt.event.MouseEvent
 import java.io.File
 import javax.swing.*
 
+import SpotExt.toHTML
+import java.io.IOException
+
 /**
  *
  * Created by minjaesong on 2017-09-20.
@@ -41,6 +44,14 @@ class SpotExtGUI : JFrame("Spotread Extractor GUI") {
     val msgInputFileLoaded = "Input file loaded"
     val msgOutputfileSelected = "Output file selected"
     val msgCanceled = "Operation cancelled"
+
+    val msgNoEntryFound = "No entries found in input file"
+    val msgWriteError = "Failed to write: "
+
+    val msgExportHTML = "HTML exported"
+    val msgExportCSV = "CSV exported"
+    val msgExport8 = "8bpp colour map exported"
+    val msgExport16 = "16bpp colour map exported"
 
     var infile: File? = null
     var outfile: File? = null
@@ -134,6 +145,23 @@ class SpotExtGUI : JFrame("Spotread Extractor GUI") {
                     }
                     JFileChooser.ERROR_OPTION -> {
                         //showerror
+                    }
+                }
+            }
+        })
+
+        buttonExportHTML.addMouseListener(object : MouseAdapter() {
+            override fun mouseClicked(e: MouseEvent) {
+                if (infile != null && outfile != null) {
+                    try {
+                        outfile!!.writeText(SpotExt.parseFile(infile!!)!!.toHTML())
+                        statusMsg.text = msgExportHTML
+                    }
+                    catch (n: KotlinNullPointerException) {
+                        statusMsg.text = msgNoEntryFound
+                    }
+                    catch (io: IOException) {
+                        statusMsg.text = msgWriteError + io.message
                     }
                 }
             }

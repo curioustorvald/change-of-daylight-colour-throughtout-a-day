@@ -109,8 +109,8 @@ object CIEXYZUtil {
 /** Range: X, Y, Z: 0 - 1.0+ (One-based-plus) */
 data class CIEXYZ(var X: Float = 0f, var Y: Float = 0f, var Z: Float = 0f, var alpha: Float = 1f) {
     init {
-        if (X > 2f || Y > 2f || Z > 2f)
-            throw IllegalArgumentException("Value range error - this version of CIEXYZ is one-based (0.0 - 1.0+): ($X, $Y, $Z)")
+        //if (X > 2f || Y > 2f || Z > 2f)
+        //    throw IllegalArgumentException("Value range error - this version of CIEXYZ is one-based (0.0 - 1.0+): ($X, $Y, $Z)")
     }
 }
 
