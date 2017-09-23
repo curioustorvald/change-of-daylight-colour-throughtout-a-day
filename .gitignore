@@ -1,1 +1,7 @@
 extractor/out/*
+extractor/bin/*
+hs_err_pid*
+Thumbs.db
+*.jar
+.DS_Store
+~$*
