@@ -47,11 +47,14 @@ class SpotExtGUI : JFrame("Spotread Extractor GUI") {
 
     val msgNoEntryFound = "No entries found in input file"
     val msgWriteError = "Failed to write: "
+    val msgWorkingOn = "Working on..."
+    val msgInOutIdentical = "Input and output file is identical!"
 
     val msgExportHTML = "HTML exported"
     val msgExportCSV = "CSV exported"
     val msgExport8 = "8bpp colour map exported"
     val msgExport16 = "16bpp colour map exported"
+
 
     var infile: File? = null
     var outfile: File? = null
@@ -136,9 +139,14 @@ class SpotExtGUI : JFrame("Spotread Extractor GUI") {
                 val fileChooser = JFileChooser()
                 when (fileChooser.showSaveDialog(null)) {
                     JFileChooser.APPROVE_OPTION -> {
-                        outfile = fileChooser.selectedFile
-                        statusMsg.text = msgOutputfileSelected
-                        textAreaOutfile.text = outfile!!.canonicalPath
+                        if (fileChooser.selectedFile != infile) {
+                            outfile = fileChooser.selectedFile
+                            statusMsg.text = msgOutputfileSelected
+                            textAreaOutfile.text = outfile!!.canonicalPath
+                        }
+                        else {
+                            JOptionPane.showMessageDialog(null, msgInOutIdentical, "Error", JOptionPane.ERROR_MESSAGE)
+                        }
                     }
                     JFileChooser.CANCEL_OPTION -> {
                         statusMsg.text = msgCanceled
@@ -154,6 +162,7 @@ class SpotExtGUI : JFrame("Spotread Extractor GUI") {
             override fun mouseClicked(e: MouseEvent) {
                 if (infile != null && outfile != null) {
                     try {
+                        statusMsg.text = msgWorkingOn
                         outfile!!.writeText(SpotExt.parseFile(infile!!)!!.toHTML())
                         statusMsg.text = msgExportHTML
                     }
