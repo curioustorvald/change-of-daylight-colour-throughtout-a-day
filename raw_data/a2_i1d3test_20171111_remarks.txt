@@ -1,0 +1,8 @@
+Installment
+	New setup took in place, first ever data production.
+
+Weather
+	Sunny, partialy cloudy.
+
+Remarks
+	Accurate weather data can be retrieved from METAR station "KQEY" (GEUMSAN RWS).

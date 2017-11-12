@@ -2,6 +2,7 @@ import net.torvald.colourutil.CIEYxy
 import net.torvald.colourutil.CIEXYZUtil.toColor
 import net.torvald.colourutil.ColourTemp
 import java.io.File
+import kotlin.math.pow
 
 /**
  * Only works with ArgyllCMS logs.
@@ -10,7 +11,7 @@ import java.io.File
  */
 object SpotExt {
 
-    private val dateFormat = Regex("""[A-Za-z]{3,} [A-Za-z]+ [0-9]{1,2} [0-9]{1,2}:[0-9]{2,}:[0-9]{2,} [^\n]+""")
+    private val dateFormat = Regex("""[A-Za-z]{3,} [A-Za-z]+[ ]{1,2}[0-9]{1,2} [0-9]{1,2}:[0-9]{2,}:[0-9]{2,} [^\n]+""")
     private val YxyFormat = Regex("""Yxy: [0-9]+\.[0-9]+ [0-9]+\.[0-9]+ [0-9]+\.[0-9]+(?=\n)""")
     private val daylightCCTStr = Regex("""Closest Daylight temperature  = [0-9]+K \(Delta E [0-9]+\.[0-9]+\)""")
     private val CCTwithinDay = Regex("""[0-9]+(?=K)""")
@@ -93,22 +94,27 @@ object SpotExt {
         val sb = StringBuilder()
 
         sb.append("""<html><meta charset="utf-8"/><body><table border=1>""")
-        sb.append("""<tr><td>Time</td><td>Y</td><td>x</td><td>y</td><td>sRGB</td><td>T<sub>D</sub> (K)</td><td>sRGB</td><td>ΔE<sub>D</sub></td></tr>""")
+        sb.append("""<tr><td>Time</td><td>Y</td><td>x</td><td>y</td><td>sRGB</td><td>sRGB</td><td>T<sub>D</sub> (K)</td><td>sRGB</td><td>sRGB</td><td>ΔE<sub>D</sub></td></tr>""")
 
 
         this.forEach {
+            val apparentY = it.Luma.pow(0.5f) / 100f // (10000f -> 100f) -> 1.0f
+
+
             sb.append("<tr><td>${it.time}</td>" +
                     "<td align='right'>${it.Luma}</td>" +
                     "<td align='right'>${it.x}</td>" +
                     "<td align='right'>${it.y}</td>" +
+                    "<td bgcolor='${CIEYxy(apparentY, it.x, it.y).toColor().toHTMLColorCode()}'></td>" +
                     "<td bgcolor='${CIEYxy(swatchLum, it.x, it.y).toColor().toHTMLColorCode()}'></td>" +
                     "<td align='right'>${it.closestDaylightK}</td>" +
                     "<td bgcolor='${ColourTemp(it.closestDaylightK.toFloat(), swatchLum).toHTMLColorCode()}'></td>" +
+                    "<td bgcolor='${ColourTemp(it.closestDaylightK.toFloat(), apparentY).toHTMLColorCode()}'></td>" +
                     "<td align='right'>${it.deltaE_d}</td></tr>")
         }
 
 
-        sb.append("<tr><td>Time</td><td>Y</td><td>x</td><td>y</td><td>Y=${swatchLum}</td><td>T<sub>D</sub> (K)</td><td>Y=${swatchLum}</td><td>ΔE<sub>D</sub></td></tr>")
+        sb.append("<tr><td>Time</td><td>Y</td><td>x</td><td>y</td><td>Y<sup>0.5</sup></td><td>Y=${swatchLum}</td><td>T<sub>D</sub> (K)</td><td>Y=${swatchLum}</td><td>Y<sup>0.5</sup></td><td>ΔE<sub>D</sub></td></tr>")
 
 
         return sb.toString()
