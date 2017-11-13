@@ -6,3 +6,5 @@ Weather
 
 Remarks
 	Accurate weather data can be retrieved from METAR station "KQEY" (GEUMSAN RWS).
+	Local billiard club closes at 00:05 (source of artificial light)
+	Local health club opens at aroud 03:37 (source of artificial light)
