@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="SpotreadExtract:jar">
+    <output-path>$PROJECT_DIR$/out/</output-path>
+    <root id="root">
+      <element id="archive" name="SpotreadExtract.jar">
+        <element id="module-output" name="SpotreadExtract" />
+      </element>
+      <element id="library" level="project" name="KotlinJavaRuntime" />
+    </root>
+  </artifact>
+</component>
