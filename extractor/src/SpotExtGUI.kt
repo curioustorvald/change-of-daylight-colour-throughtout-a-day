@@ -11,14 +11,22 @@ import java.io.IOException
 
 /**
  *
+ * Synopsis: java -jar spotextgui.java infile outfile [type: html, css, 8bpp, 16bpp]
+ *
  * Created by minjaesong on 2017-09-20.
  */
 fun main(args: Array<String>) {
     if (args.size == 0) {
         SpotExtGUI()
     }
+    else if (args.size == 1) {
+        println("Synopsis: java -jar spotextgui.java infile outfile [html, css, 8bpp, 16bpp]; HTML is default operation")
+    }
     else {
-        TODO("command line access")
+        val logfile = File(args[0])
+        val outfile = File(args[1])
+
+        outfile.writeText(SpotExt.parseFile(logfile)!!.toHTML())
     }
 }
 
