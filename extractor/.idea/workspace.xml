@@ -17,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SpotExtGUI.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SpotExtGUI.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SpotExtGUI.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="165" column="56" lean-forward="false" selection-start-line="165" selection-start-column="56" selection-end-line="165" selection-end-column="56" />
+            <state relative-caret-position="338">
+              <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
               <folding>
                 <element signature="e#0#241#0" expanded="true" />
               </folding>
@@ -32,7 +32,7 @@
       <file leaf-file-name="SpotExt.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SpotExt.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
+            <state relative-caret-position="1391">
               <caret line="107" column="84" lean-forward="false" selection-start-line="107" selection-start-column="84" selection-end-line="107" selection-end-column="84" />
               <folding>
                 <element signature="e#0#169#0" expanded="true" />
@@ -51,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CIEXYZUtil.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CIEXYZUtil.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/colourutil/CIEXYZUtil.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="944">
               <caret line="97" column="105" lean-forward="false" selection-start-line="97" selection-start-column="105" selection-end-line="97" selection-end-column="105" />
               <folding />
             </state>
@@ -92,8 +92,8 @@
         <option value="$PROJECT_DIR$/src/math/Vector2f.java" />
         <option value="$PROJECT_DIR$/src/colourutil/ColourTemp.kt" />
         <option value="$PROJECT_DIR$/src/colourutil/CIEXYZUtil.kt" />
-        <option value="$PROJECT_DIR$/src/SpotExtGUI.kt" />
         <option value="$PROJECT_DIR$/src/SpotExt.kt" />
+        <option value="$PROJECT_DIR$/src/SpotExtGUI.kt" />
       </list>
     </option>
   </component>
@@ -190,8 +190,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,6 +219,8 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -376,7 +376,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20785597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2111293" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -400,6 +400,42 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/SpotExtGUI.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2145">
+          <caret line="165" column="56" lean-forward="false" selection-start-line="165" selection-start-column="56" selection-end-line="165" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#241#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SpotExt.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1391">
+          <caret line="107" column="84" lean-forward="false" selection-start-line="107" selection-start-column="84" selection-end-line="107" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/colourutil/ColourTemp.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/colourutil/CIEXYZUtil.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1261">
+          <caret line="97" column="105" lean-forward="false" selection-start-line="97" selection-start-column="105" selection-end-line="97" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SpotExtGUI.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -725,19 +761,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SpotExtGUI.kt">
+    <entry file="file://$PROJECT_DIR$/src/colourutil/CIEXYZUtil.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="165" column="56" lean-forward="false" selection-start-line="165" selection-start-column="56" selection-end-line="165" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#241#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="944">
+          <caret line="97" column="105" lean-forward="false" selection-start-line="97" selection-start-column="105" selection-end-line="97" selection-end-column="105" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SpotExt.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
+        <state relative-caret-position="1391">
           <caret line="107" column="84" lean-forward="false" selection-start-line="107" selection-start-column="84" selection-end-line="107" selection-end-column="84" />
           <folding>
             <element signature="e#0#169#0" expanded="true" />
@@ -745,11 +779,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/colourutil/CIEXYZUtil.kt">
+    <entry file="file://$PROJECT_DIR$/src/SpotExtGUI.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="97" column="105" lean-forward="false" selection-start-line="97" selection-start-column="105" selection-end-line="97" selection-end-column="105" />
-          <folding />
+        <state relative-caret-position="338">
+          <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#241#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
