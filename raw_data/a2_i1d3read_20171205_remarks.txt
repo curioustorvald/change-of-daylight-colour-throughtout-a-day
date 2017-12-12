@@ -1,0 +1,10 @@
+Installment
+	Colourimeter set closer to the reflector, resulting much brighter input
+	Waterproof sealed
+
+Weather
+	Sunny, very few clouds.
+
+Remarks
+	Accurate weather data can be retrieved from METAR station "KQEY" (GEUMSAN RWS).
+	Arteficial light no longer matters as daytime is got significantly shorter
